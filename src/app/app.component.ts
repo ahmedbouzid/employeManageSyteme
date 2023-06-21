@@ -9,6 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'EmployeManage';
+  eductationOption = [
+    'Diplomé' ,
+    "Phd" ,
+    "sans diplome"
+  ]
   display = "none" ;
   openModal() {
     this.display = "block"
