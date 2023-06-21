@@ -1,1 +1,96 @@
-<app-header></app-header>
+<div class="container-fluid">
+  <!-- Header -->
+  <app-header></app-header>
+  <main>
+    <!-- Tool bar for search and add -->
+    <div class="toolbar mt-5">
+      <div class="add-employee ">
+        <button class="btn btn-outline-primary btn-lg">Add Employee</button>
+      </div>
+      <div class="search-employe">
+        <input type="search" class="form-control" placeholder="Search Employee">
+      </div>
+    </div>
+    <!-- Display all employees here -->
+    <div class="employee">
+      <div class="row mt-5">
+        <div class="col text-center">
+          <span class="text-secondary fs-2 fw-bold fst-italic">No Employé</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+ <!-- Button trigger modal -->
+ <button type="button" class="btn btn-info btn-lg" (click)="openModal()">click to open</button>
+ <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+      <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                  <div class="modal-header">
+                        <h4 class="modal-title">Employee information</h4>
+                        <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                      </div>
+              <div class="modal-body">
+<form action="">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First Name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" name="" id="" placeholder="Last Name">
+    </div>
+  </div>
+  <!-- Information personnelle -->
+  <div class="row mt-2">
+    <div class="col">
+      <h6 class="text-secondary fst-italic"> Personal Info</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="datepicker" class="form-label">Birthday</label>
+      <input type="date" class="form-control" id="datepicker">
+    </div>
+    <div class="col">
+    <div class="row">
+      <label for="gender" class="form-label" >Gender</label>
+    </div>
+
+    <div class="col">
+      <div class="row ">
+
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input " name="gender" id="male" value="1">
+          <label for="male" class="form-check-label">Male</label>
+
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input " name="gender" id="female" value="2">
+          <label for="female" class="form-check-label">Female</label>
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <select name="" class="form-select">
+<option value=""> Select</option>
+        </select>
+      </div>
+    </div>
+</form>                      </div>
+                  <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" (click)="onCloseHandled()" >Close</button>
+                        <button type="button" class="btn btn-outline-primary" (click)="onCloseHandled()" >ADD</button>
+
+                      </div>
+         </div>
+          </div>
+</div>
+
+<!-- Modal -->
+
