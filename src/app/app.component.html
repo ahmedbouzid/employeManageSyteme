@@ -5,7 +5,7 @@
     <!-- Tool bar for search and add -->
     <div class="toolbar mt-5">
       <div class="add-employee">
-        <button class="btn btn-outline-primary btn-lg">Add Employee</button>
+        <button class="btn btn-outline-primary btn-lg" (click)="openModal()">Add Employee</button>
       </div>
       <div class="search-employe">
         <input
@@ -25,10 +25,7 @@
     </div>
   </main>
 </div>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-info btn-lg" (click)="openModal()">
-  click to open
-</button>
+
 <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{ display: display }">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
