@@ -44,13 +44,14 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form [formGroup]="employeForm">
           <div class="row">
             <div class="col">
               <input
                 type="text"
                 class="form-control"
                 placeholder="First Name"
+                formControlName="firstName"
               />
             </div>
             <div class="col">
@@ -60,6 +61,7 @@
                 name=""
                 id=""
                 placeholder="Last Name"
+                formControlName="lasteName"
               />
             </div>
           </div>
@@ -72,7 +74,7 @@
           <div class="row">
             <div class="col">
               <label for="datepicker" class="form-label">Birthday</label>
-              <input type="date" class="form-control" id="datepicker" />
+              <input type="date" class="form-control" id="datepicker" formControlName="birthday" />
             </div>
             <div class="col">
               <div class="row">
@@ -88,6 +90,7 @@
                       name="gender"
                       id="male"
                       value="1"
+                      formControlName="gender"
                     />
                     <label for="male" class="form-check-label">Male</label>
                   </div>
@@ -98,6 +101,8 @@
                       name="gender"
                       id="female"
                       value="2"
+                      formControlName="gender"
+
                     />
                     <label for="female" class="form-check-label">Female</label>
                   </div>
@@ -107,7 +112,7 @@
           </div>
           <div class="row mt-3">
             <div class="col">
-              <select name="" class="form-select">
+              <select name="" class="form-select" formControlName="educattion">
                 <option value="">Select</option>
                 <option *ngFor="let opt of eductationOption">{{opt | titlecase}}</option>
               </select>
@@ -116,7 +121,7 @@
           <div class="row mt-3">
             <div class="col">
               <label for="profile" class="form-label"> Profile</label>
-              <input type="file" class="form-control" placeholder="Profile Image" name="" id="">
+              <input type="file" class="form-control" placeholder="Profile Image" #profileImage  name="" id="">
             </div>
           </div>
           <div class="row mt-3" >
@@ -126,15 +131,15 @@
           </div>
           <div class="row mt-3">
             <div class="col">
-              <input type="text" class="form-control" placeholder="Company" name="" id="">
+              <input type="text" class="form-control" formControlName="company" placeholder="Company" name="" id="">
             </div>
           </div>
           <div class="row mt-3">
             <div class="col">
-              <input type="number" class="form-control" placeholder="salary(Dinar)">
+              <input type="number" class="form-control" formControlName="jobxperience" placeholder="salary(Dinar)">
             </div>
             <div class="col">
-              <input type="number" class="form-control" placeholder="Experience">
+              <input type="number" class="form-control" formControlName="salary" placeholder="Experience">
             </div>
           </div>
         </form>

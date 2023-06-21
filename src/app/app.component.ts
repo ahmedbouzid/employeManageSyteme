@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,31 @@ import { Component } from '@angular/core';
 
 ]
 })
-export class AppComponent {
-  title = 'EmployeManage';
+export class AppComponent implements OnInit {
+
   eductationOption = [
     'Diplomé' ,
     "Phd" ,
     "sans diplome"
   ]
+
+  employeForm !: FormGroup ;
+  constructor(private fb : FormBuilder) {
+
+  }
+  ngOnInit(): void {
+    this.employeForm = this.fb.group({
+      firstName: this.fb.control('') ,
+      lastName : this.fb.control(''),
+      birthday:this.fb.control(''),
+      gender :this.fb.control('') ,
+      educattion : this.fb.control('default') ,
+      profileImage : this.fb.control(''),
+      company : this.fb.control(''),
+      jobxperience : this.fb.control(''),
+      salary : this.fb.control('')
+    })
+  }
   display = "none" ;
   openModal() {
     this.display = "block"
@@ -21,7 +40,6 @@ export class AppComponent {
   onCloseHandled(){
     this.display = "none"
   }
-  constructor(){
 
-  }
+
 }
