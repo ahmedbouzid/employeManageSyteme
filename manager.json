@@ -1,9 +1,64 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "firstName": "aaa",
+      "lastName": "aaa",
+      "birthday": "2023-06-16",
+      "gender": "2",
+      "educattion": "Phd",
+      "profileImage": "",
+      "company": "aaaa",
+      "jobxperience": 3,
+      "salary": 4,
+      "id": 1
+    },
+    {
+      "firstName": "ddd",
+      "lastName": "ddd",
+      "birthday": "2023-06-16",
+      "gender": "1",
+      "educattion": "Sans Diplome",
+      "profileImage": "",
+      "company": "dddddd",
+      "jobxperience": 3,
+      "salary": 3,
+      "id": 2
+    },
+    {
+      "firstName": "xcc",
+      "lastName": "ccc",
+      "birthday": "",
+      "gender": "",
+      "educattion": "Diplomé",
+      "profileImage": "",
+      "company": "cc",
+      "jobxperience": 4,
+      "salary": 3,
+      "id": 3
+    },
+    {
+      "firstName": "xcc",
+      "lastName": "ccc",
+      "birthday": "",
+      "gender": "",
+      "educattion": "Diplomé",
+      "profileImage": "",
+      "company": "cc",
+      "jobxperience": 4,
+      "salary": 3,
+      "id": 4
+    },
+    {
+      "firstName": "ddddddd",
+      "lastName": "ddddddddd",
+      "birthday": "",
+      "gender": "",
+      "educattion": "default",
+      "profileImage": "",
+      "company": "",
+      "jobxperience": "",
+      "salary": "",
+      "id": 5
     }
   ],
   "comments": [
